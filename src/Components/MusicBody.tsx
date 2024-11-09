@@ -38,7 +38,7 @@ const MusicBody: FC = () => {
     <div className="flex flex-col items-center bg-[#99ca66] rounded-md mt-20 md:mt-1 p-2 md:p-0 w-full mx-auto">
       <img
         className="w-auto h-72 md:w-auto md:h-auto object-cover mt-9 rounded md:rounded-none"
-        src="src/Components/Ghost.gif"
+        src="/assets/Ghost.gif"
         alt="Ghost animation"
       />
       <div className="flex flex-col  items-end bg-[#99ca66] mt-36 md:mt-0.5">
