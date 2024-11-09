@@ -5,7 +5,10 @@ import { FaFacebook } from "react-icons/fa";
 import { FaSquareThreads } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { IconContext } from "react-icons/lib/esm/iconContext";
+import { IconContext } from "react-icons";
+// import { IconContext } from "react-icons/lib/iconContext";
+
+
 
 const MusicBody: FC = () => {
   useEffect(() => {

@@ -29,3 +29,11 @@
 // ShowDetails.defaultProps = {};
 
 // export default memo(ShowDetails);
+// ShowList.tsx
+import React from 'react';
+
+const ShowDetails = () => {
+  return <div>Show List</div>;
+};
+
+export default ShowDetails;

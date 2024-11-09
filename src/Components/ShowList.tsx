@@ -45,3 +45,12 @@
 // };
 
 // export default connect(mapStateToProps, mapDispatchToPorps)(memo(ShowList));
+
+// ShowList.tsx
+import React from 'react';
+
+const ShowList = () => {
+  return <div>Show List</div>;
+};
+
+export default ShowList;

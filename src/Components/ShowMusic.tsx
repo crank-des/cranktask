@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { IconContext } from "react-icons/lib/esm/iconContext";
 import { IoMdMenu } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import { IconContext } from "react-icons";
+// import { IconContext } from "react-icons/lib/iconContext";
 
 const ShowMusic = () => {
   const [openDropdown, setOpenDropdown] = useState("");
