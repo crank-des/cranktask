@@ -1,6 +1,6 @@
 import MusicBody from "./Components/MusicBody";
-import ShowList from "./Components/ShowList";
-import ShowMusic from "./Components/ShowMusic";
+// import ShowList from "./Components/ShowList";
+// import ShowMusic from "./Components/ShowMusic";
 
 function App() {
   return (
