@@ -8,8 +8,6 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { IconContext } from "react-icons";
 // import { IconContext } from "react-icons/lib/iconContext";
 
-
-
 const MusicBody: FC = () => {
   useEffect(() => {
     const gmailIcon = document.getElementById("gmail-icon");
@@ -36,12 +34,14 @@ const MusicBody: FC = () => {
 
   return (
     <div className="flex flex-col items-center bg-[#99ca66] rounded-md mt-20 md:mt-1 p-2 md:p-0 w-full mx-auto">
+      <h1 className=" font-gideon text-white mb-1 text-xl font-semibold">Stay Tuned</h1>
       <img
         className="w-auto h-72 md:w-auto md:h-auto object-cover mt-9 rounded md:rounded-none"
         src="/assets/Ghost.gif"
         alt="Ghost animation"
       />
       <div className="flex flex-col  items-end bg-[#99ca66] mt-36 md:mt-0.5">
+        <div className="font-bold text-lg mt-4 text-white">Connect With Us</div>
         <div className="flex space-x-4">
           <IconContext.Provider value={{ color: "white", size: "22px" }}>
             <a
@@ -98,11 +98,9 @@ const MusicBody: FC = () => {
             </a>
           </IconContext.Provider>
         </div>
-        {/* <div className="font-bold text-lg mt-4 text-white">About me:</div> */}
       </div>
     </div>
   );
 };
 
 export default MusicBody;
-
