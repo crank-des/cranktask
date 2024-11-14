@@ -41,7 +41,7 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between md:min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto h-auto md:h-screen overflow-hidden">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto h-full md:h-screen">
       <audio loop className="hidden">
         <source src="/assets/background.wav" type="audio/wav" />
         <source src="/assets/BEAT 15.mp3" type="audio/mp3" />
@@ -56,9 +56,9 @@ const MusicBody: FC = () => {
       </div>
 
       {/* Middle: Center the Ghost gif */}
-      <div className="flex flex-col items-center justify-center flex-1">
+      <div className="flex flex-col items-center justify-center flex-1 w-full">
         <img
-          className="w-full h-60 sm:h-72 md:h-80 lg:h-96 object-contain mt-4 rounded md:rounded-none"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain mt-4 rounded md:rounded-none"
           src="/assets/Ghost.gif"
           alt="Ghost animation"
         />
@@ -74,7 +74,7 @@ const MusicBody: FC = () => {
       </IconContext.Provider>
 
       {/* Bottom Section */}
-      <div className="flex flex-col items-center md:justify-end flex-1 mt-10">
+      <div className="flex flex-col items-center md:justify-end mt-10">
         <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl">
           Connect With Us
         </h2>
