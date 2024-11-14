@@ -1,11 +1,22 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaSquareThreads, FaSquareXTwitter } from "react-icons/fa6";
+import { IoPlayCircleOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 
 const MusicBody: FC = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayAudio = () => {
+    const audio = document.querySelector("audio");
+    if (audio) {
+      audio.play();
+      setIsPlaying(true);
+    }
+  };
+
   useEffect(() => {
     const gmailIcon = document.getElementById("gmail-icon");
 
@@ -28,20 +39,13 @@ const MusicBody: FC = () => {
       console.error("Gmail icon not found on the page.");
     }
   }, []);
-  useEffect(() => {
-    const audio = document.querySelector("audio");
-    if (audio) {
-      audio.volume = .4; // Set volume between 0 and 1 (0.5 is 50% volume)
-    }
-  }, []);
-
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto overflow-hidden">
-      <audio loop autoPlay className="hidden">
+    <div className="flex flex-col items-center justify-between md:min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto h-auto md:h-screen overflow-hidden">
+      <audio loop className="hidden">
         <source src="/assets/background.wav" type="audio/wav" />
         <source src="/assets/BEAT 15.mp3" type="audio/mp3" />
-        Your browser .
+        Your browser does not support the audio element.
       </audio>
 
       {/* Head */}
@@ -60,50 +64,23 @@ const MusicBody: FC = () => {
         />
       </div>
 
+      {/* Play Button */}
+      <IconContext.Provider value={{ color: "white", size: "30px" }}>
+        {!isPlaying && (
+          <button onClick={handlePlayAudio}>
+            <IoPlayCircleOutline />
+          </button>
+        )}
+      </IconContext.Provider>
+
       {/* Bottom Section */}
-      <div className="flex flex-col items-center md:justify-end flex-1 mt-20">
+      <div className="flex flex-col items-center md:justify-end flex-1 mt-10">
         <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl">
           Connect With Us
         </h2>
 
         {/* Social Icons */}
         <div className="flex flex-wrap justify-center md:justify-start space-x-4 mt-1">
-          <IconContext.Provider value={{ color: "white", size: "22px" }}>
-            <a
-              href="http://instagram.com/cranktasy"
-              className="text-white hover:text-gray-300 transition"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-          </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white", size: "22px" }}>
-            <div
-              id="gmail-icon"
-              className="cursor-pointer text-white hover:text-gray-300 transition"
-              aria-label="Gmail"
-            >
-              <BiLogoGmail />
-            </div>
-          </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white", size: "22px" }}>
-            <a
-              href="https://www.facebook.com/cranktasy.pro"
-              className="text-white hover:text-gray-300 transition"
-              aria-label="Facebook"
-            >
-              <FaFacebook />
-            </a>
-          </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white", size: "22px" }}>
-            <a
-              href="http://threads.net/@cranktasy"
-              className="text-white hover:text-gray-300 transition"
-              aria-label="Thread"
-            >
-              <FaSquareThreads />
-            </a>
-          </IconContext.Provider>
           <IconContext.Provider value={{ color: "white", size: "22px" }}>
             <a
               href="https://www.youtube.com/@CrankTasy"
@@ -115,12 +92,50 @@ const MusicBody: FC = () => {
           </IconContext.Provider>
           <IconContext.Provider value={{ color: "white", size: "22px" }}>
             <a
+              href="http://instagram.com/cranktasy"
+              className="text-white hover:text-gray-300 transition"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+          </IconContext.Provider>
+          <IconContext.Provider value={{ color: "white", size: "22px" }}>
+            <a
+              href="http://threads.net/@cranktasy"
+              className="text-white hover:text-gray-300 transition"
+              aria-label="Thread"
+            >
+              <FaSquareThreads />
+            </a>
+          </IconContext.Provider>
+
+          <IconContext.Provider value={{ color: "white", size: "22px" }}>
+            <a
+              href="https://www.facebook.com/cranktasy.pro"
+              className="text-white hover:text-gray-300 transition"
+              aria-label="Facebook"
+            >
+              <FaFacebook />
+            </a>
+          </IconContext.Provider>
+
+          <IconContext.Provider value={{ color: "white", size: "22px" }}>
+            <a
               href="http://x.com/cranktasy"
               className="text-white hover:text-gray-300 transition"
               aria-label="Twitter"
             >
               <FaSquareXTwitter />
             </a>
+          </IconContext.Provider>
+          <IconContext.Provider value={{ color: "white", size: "22px" }}>
+            <div
+              id="gmail-icon"
+              className="cursor-pointer text-white hover:text-gray-300 transition"
+              aria-label="Gmail"
+            >
+              <BiLogoGmail />
+            </div>
           </IconContext.Provider>
         </div>
       </div>
