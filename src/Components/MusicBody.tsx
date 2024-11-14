@@ -41,7 +41,7 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto h-full md:h-screen">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] overflow-hidden rounded-md px-4 py-2 w-full mx-auto h-full md:h-screen">
       <audio loop className="hidden">
         <source src="/assets/background.wav" type="audio/wav" />
         <source src="/assets/BEAT 15.mp3" type="audio/mp3" />
@@ -49,8 +49,8 @@ const MusicBody: FC = () => {
       </audio>
 
       {/* Head */}
-      <div className="flex flex-col items-center mt-2 md:mt-4">
-        <h1 className="font-helvetica text-white mb-3 text-2xl md:text-3xl lg:text-4xl">
+      <div className="flex flex-col items-center md:mt-4">
+        <h1 className="font-helvetica text-white mb-1 text-2xl md:text-3xl lg:text-4xl">
           Stay Tuned
         </h1>
       </div>
@@ -58,7 +58,7 @@ const MusicBody: FC = () => {
       {/* Middle: Center the Ghost gif */}
       <div className="flex flex-col items-center justify-center flex-1 w-full">
         <img
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain mt-4 rounded md:rounded-none"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain rounded md:rounded-none"
           src="/assets/Ghost.gif"
           alt="Ghost animation"
         />
@@ -74,13 +74,13 @@ const MusicBody: FC = () => {
       </IconContext.Provider>
 
       {/* Bottom Section */}
-      <div className="flex flex-col items-center md:justify-end mt-10">
+      <div className="flex flex-col items-center md:justify-end">
         <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl">
           Connect With Us
         </h2>
 
         {/* Social Icons */}
-        <div className="flex flex-wrap justify-center md:justify-start space-x-4 mt-1">
+        <div className="flex flex-wrap justify-center md:justify-start space-x-4">
           <IconContext.Provider value={{ color: "white", size: "22px" }}>
             <a
               href="https://www.youtube.com/@CrankTasy"
