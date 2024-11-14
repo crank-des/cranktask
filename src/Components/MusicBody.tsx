@@ -30,10 +30,10 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-1 w-full mx-auto">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto overflow-hidden">
       {/* Head */}
-      <div className="flex flex-col items-center mt-2 md:mt-3">
-        <h1 className=" font-helvetica text-white mb-3 text-2xl md:text-3xl lg:text-4xl">
+      <div className="flex flex-col items-center mt-2 md:mt-4">
+        <h1 className="font-helvetica text-white mb-3 text-2xl md:text-3xl lg:text-4xl">
           Stay Tuned
         </h1>
       </div>
@@ -49,11 +49,12 @@ const MusicBody: FC = () => {
 
       {/* Bottom Section */}
       <div className="flex flex-col items-center justify-end flex-1">
-        <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl mt-1 mb-1">
+        <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl">
           Connect With Us
         </h2>
 
-        <div className="flex flex-wrap justify-center md:justify-start space-x-4">
+        {/* Social Icons */}
+        <div className="flex flex-wrap justify-center md:justify-start space-x-4 mt-1">
           <IconContext.Provider value={{ color: "white", size: "22px" }}>
             <a
               href="http://instagram.com/cranktasy"
