@@ -61,7 +61,7 @@ const MusicBody: FC = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col items-center justify-end flex-1">
+      <div className="flex flex-col items-center md:justify-end flex-1 mt-20">
         <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl">
           Connect With Us
         </h2>
