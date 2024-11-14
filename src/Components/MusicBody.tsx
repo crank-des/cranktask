@@ -1,12 +1,9 @@
 import { FC, useEffect } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
-import { FaFacebook } from "react-icons/fa";
-import { FaSquareThreads } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaSquareThreads, FaSquareXTwitter } from "react-icons/fa6";
 import { IconContext } from "react-icons";
-// import { IconContext } from "react-icons/lib/iconContext";
 
 const MusicBody: FC = () => {
   useEffect(() => {
@@ -33,18 +30,30 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center bg-[#99ca66] rounded-md mt-20 md:mt-1 p-2 md:p-0 w-full mx-auto">
-      <h1 className=" font-gideon text-white mb-1 text-xl">
-        Stay Tuned
-      </h1>
-      <img
-        className="w-auto h-72 md:w-auto md:h-auto object-cover mt-9 rounded md:rounded-none"
-        src="/assets/Ghost.gif"
-        alt="Ghost animation"
-      />
-      <h2 className="font-gideon text-white text-xl mt-2">Connect With Us</h2>
-      <div className="flex flex-col  items-end bg-[#99ca66] mt-36 md:mt-0.5">
-        <div className="flex space-x-4">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-6 w-full mx-auto">
+      {/* Head */}
+      <div className="flex flex-col items-center mt-2 md:mt-3">
+        <h1 className="font-gideon text-white mb-3 text-2xl md:text-3xl lg:text-4xl">
+          Stay Tuned
+        </h1>
+      </div>
+
+      {/* Middle: Center the Ghost gif */}
+      <div className="flex flex-col items-center justify-center flex-1">
+        <img
+          className="w-full h-60 sm:h-72 md:h-80 lg:h-96 object-contain mt-4 rounded md:rounded-none"
+          src="/assets/Ghost.gif"
+          alt="Ghost animation"
+        />
+      </div>
+
+      {/* Bottom Section */}
+      <div className="flex flex-col items-center justify-end flex-1">
+        <h2 className="font-gideon text-white text-lg md:text-xl lg:text-2xl mt-4 mb-1">
+          Connect With Us
+        </h2>
+
+        <div className="flex flex-wrap justify-center md:justify-start space-x-4 mt-4">
           <IconContext.Provider value={{ color: "white", size: "22px" }}>
             <a
               href="http://instagram.com/cranktasy"
@@ -85,7 +94,7 @@ const MusicBody: FC = () => {
             <a
               href="https://www.youtube.com/@CrankTasy"
               className="text-white hover:text-gray-300 transition"
-              aria-label="Thread"
+              aria-label="YouTube"
             >
               <FaYoutube />
             </a>

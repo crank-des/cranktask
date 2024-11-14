@@ -4,7 +4,7 @@ import MusicBody from "./Components/MusicBody";
 
 function App() {
   return (
-    <div className="bg-[#99ca66] p-1 h-screen">
+    <div className="bg-[#99ca66] h-screen">
       {/* <ShowMusic /> */}
       <div>
         <MusicBody />
