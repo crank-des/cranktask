@@ -30,7 +30,7 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-6 w-full mx-auto">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-1 w-full mx-auto">
       {/* Head */}
       <div className="flex flex-col items-center mt-2 md:mt-3">
         <h1 className=" font-helvetica text-white mb-3 text-2xl md:text-3xl lg:text-4xl">
