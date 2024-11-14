@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="bg-[#99ca66] h-screen">
       {/* <ShowMusic /> */}
-      <div>
+    
         <MusicBody />
-      </div>
+      
     </div>
   );
 }

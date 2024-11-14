@@ -3,7 +3,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                gideon: ['"Gideon Roman"', "serif"], // Add your custom font here
+                gideon: ['"Gideon Roman"', "serif"],
+                helvetica: ['"Helvetica LT Thai W31 Regular"', "sans-serif"], // Add your custom font here
             },
         },
     },
