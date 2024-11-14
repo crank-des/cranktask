@@ -28,9 +28,22 @@ const MusicBody: FC = () => {
       console.error("Gmail icon not found on the page.");
     }
   }, []);
+  useEffect(() => {
+    const audio = document.querySelector("audio");
+    if (audio) {
+      audio.volume = .4; // Set volume between 0 and 1 (0.5 is 50% volume)
+    }
+  }, []);
+
 
   return (
     <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] rounded-md px-4 py-2 w-full mx-auto overflow-hidden">
+      <audio loop autoPlay className="hidden">
+        <source src="public\assets\background.wav" type="audio/wav" />
+        <source src="public\assets\BEAT 15.mp3" type="audio/mp3" />
+        Your browser .
+      </audio>
+
       {/* Head */}
       <div className="flex flex-col items-center mt-2 md:mt-4">
         <h1 className="font-helvetica text-white mb-3 text-2xl md:text-3xl lg:text-4xl">
