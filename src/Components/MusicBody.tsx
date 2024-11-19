@@ -56,8 +56,8 @@ const MusicBody: FC = () => {
   return (
     <div className="flex flex-col items-center md:justify-between bg-[#99ca66] overflow-hidden h-[40rem] rounded-md px-4 py-2 w-full mx-auto md:min-h-screen">
       <audio loop className="hidden">
-        <source src="public/assets/backBeat.wav" type="audio/wav" />
-        <source src="/assets/BEAT 15.mp3" type="audio/mp3" />
+        <source src="/assets/backBeat.wav" type="audio/wav" />
+        <source src="/assets/backBeat2.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
 
