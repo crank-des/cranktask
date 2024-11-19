@@ -54,7 +54,7 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center md:justify-between bg-[#99ca66] overflow-hidden h-[40rem] rounded-md px-4 py-2 w-full mx-auto md:min-h-screen">
+    <div className="flex flex-col items-center md:justify-between bg-[#99ca66] overflow-hidden h-[42rem] rounded-md px-4 py-2 w-full mx-auto md:min-h-screen">
       <audio loop className="hidden">
         <source src="/assets/backBeat.wav" type="audio/wav" />
         <source src="/assets/backBeat2.mp3" type="audio/mp3" />
@@ -78,7 +78,7 @@ const MusicBody: FC = () => {
         {/* Play Button */}
         <IconContext.Provider value={{ color: "white", size: "30px" }}>
           {!isPlaying && (
-            <button onClick={handlePlayAudio}>
+            <button onClick={handlePlayAudio} className=" mt-24 md:mt-0">
               <IoPlayCircleOutline />
             </button>
           )}
