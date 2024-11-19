@@ -9,13 +9,26 @@ import { IconContext } from "react-icons";
 const MusicBody: FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlayAudio = () => {
-    const audio = document.querySelector("audio");
-    if (audio) {
-      audio.play();
-      setIsPlaying(true);
-    }
-  };
+  // const handlePlayAudio = () => {
+  //   const audio = document.querySelector("audio");
+  //   if (audio) {
+  //     audio.play();
+  //     setIsPlaying(true);
+  //   }
+  // };
+    const handlePlayAudio = () => {
+      const audio = document.querySelector("audio");
+      if (audio) {
+        audio
+          .play()
+          .then(() => {
+            setIsPlaying(true); // Mark as playing once audio starts
+          })
+          .catch((error) => {
+            console.error("Audio playback failed:", error);
+          });
+      }
+    };
 
   useEffect(() => {
     const gmailIcon = document.getElementById("gmail-icon");
@@ -41,9 +54,9 @@ const MusicBody: FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-[#99ca66] overflow-hidden rounded-md px-4 py-2 w-full mx-auto h-full md:h-screen">
+    <div className="flex flex-col items-center md:justify-between bg-[#99ca66] overflow-hidden h-[40rem] rounded-md px-4 py-2 w-full mx-auto md:min-h-screen">
       <audio loop className="hidden">
-        <source src="/assets/background.wav" type="audio/wav" />
+        <source src="public/assets/backBeat.wav" type="audio/wav" />
         <source src="/assets/BEAT 15.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
@@ -62,16 +75,15 @@ const MusicBody: FC = () => {
           src="/assets/Ghost.gif"
           alt="Ghost animation"
         />
+        {/* Play Button */}
+        <IconContext.Provider value={{ color: "white", size: "30px" }}>
+          {!isPlaying && (
+            <button onClick={handlePlayAudio}>
+              <IoPlayCircleOutline />
+            </button>
+          )}
+        </IconContext.Provider>
       </div>
-
-      {/* Play Button */}
-      <IconContext.Provider value={{ color: "white", size: "30px" }}>
-        {!isPlaying && (
-          <button onClick={handlePlayAudio}>
-            <IoPlayCircleOutline />
-          </button>
-        )}
-      </IconContext.Provider>
 
       {/* Bottom Section */}
       <div className="flex flex-col items-center md:justify-end">
