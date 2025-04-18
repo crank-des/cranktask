@@ -4,7 +4,7 @@ import MusicBody from "./Components/MusicBody";
 // import ShowMusic from "./Components/ShowMusic";
 function App() {
     return _jsx("div", {
-        className: "bg-[#99ca66]",
+        className: "bg-black",
         children: _jsx("div", { children: _jsx(MusicBody, {}) }),
     });
 }
