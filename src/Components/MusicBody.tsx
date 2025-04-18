@@ -1,9 +1,8 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaSquareThreads, FaSquareXTwitter } from "react-icons/fa6";
-import { IoPlayCircleOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 
 const MusicBody: FC = () => {
