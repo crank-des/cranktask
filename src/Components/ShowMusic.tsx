@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
-import { IoMdMenu } from "react-icons/io";
-import { FaChevronDown } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
+import {
+  IconShoppingCart,
+  IconMenu2,
+  IconChevronDown,
+  IconSearch,
+} from "@tabler/icons-react";
 import { IconContext } from "react-icons";
-// import { IconContext } from "react-icons/lib/iconContext";
+
 
 const ShowMusic = () => {
   const [openDropdown, setOpenDropdown] = useState("");
@@ -26,7 +28,7 @@ const ShowMusic = () => {
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <IoMdMenu />
+              <IconMenu2 />
             </button>
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
@@ -47,7 +49,7 @@ const ShowMusic = () => {
                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center"
                       >
                         {menu}
-                        <FaChevronDown />
+                        <IconChevronDown />
                       </button>
                       {openDropdown === menu && (
                         <div className="origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-10">
@@ -74,8 +76,7 @@ const ShowMusic = () => {
           <div className="flex items-center space-x-4">
             <div className="relative flex items-center">
               <div className=" ">
-               
-                <CiSearch />
+                <IconSearch />
               </div>
               <input
                 type="text"
@@ -85,7 +86,7 @@ const ShowMusic = () => {
             </div>
             <IconContext.Provider value={{ color: "white", size: "26px" }}>
               <div className="relative cursor-pointer">
-                <FaShoppingCart />
+                <IconShoppingCart />
                 <span className="absolute -top-1 -right-1 bg-red-600 text-white rounded-full h-4 w-4 flex items-center justify-center text-xs">
                   0
                 </span>

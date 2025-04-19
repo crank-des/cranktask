@@ -3,6 +3,15 @@ import { FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaSquareThreads, FaSquareXTwitter } from "react-icons/fa6";
+import {
+  IconBrandInstagram,
+  IconBrandYoutube,
+  IconMail,
+  IconBrandFacebook,
+  IconBrandTwitter,
+  IconBrandThreads,
+} from "@tabler/icons-react";
+
 import { IconContext } from "react-icons";
 
 const MusicBody: FC = () => {
@@ -92,7 +101,7 @@ const MusicBody: FC = () => {
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="YouTube"
               >
-                <FaYoutube />
+                <IconBrandYoutube />
               </a>
             </IconContext.Provider>
             <IconContext.Provider value={{ color: "white", size: "22px" }}>
@@ -101,7 +110,9 @@ const MusicBody: FC = () => {
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Instagram"
               >
-                <FaInstagram />
+                <span>
+                  <IconBrandInstagram />
+                </span>
               </a>
             </IconContext.Provider>
             <IconContext.Provider value={{ color: "white", size: "22px" }}>
@@ -110,7 +121,7 @@ const MusicBody: FC = () => {
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Thread"
               >
-                <FaSquareThreads />
+                  <IconBrandThreads />
               </a>
             </IconContext.Provider>
 
@@ -120,7 +131,7 @@ const MusicBody: FC = () => {
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Facebook"
               >
-                <FaFacebook />
+                <IconBrandFacebook />
               </a>
             </IconContext.Provider>
 
@@ -130,7 +141,7 @@ const MusicBody: FC = () => {
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Twitter"
               >
-                <FaSquareXTwitter />
+                <IconBrandTwitter />
               </a>
             </IconContext.Provider>
             <IconContext.Provider value={{ color: "white", size: "22px" }}>
@@ -140,7 +151,7 @@ const MusicBody: FC = () => {
                 className="text-white cursor-pointer hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Gmail"
               >
-                <BiLogoGmail />
+                <IconMail />
               </div>
             </IconContext.Provider>
           </div>
