@@ -4,11 +4,10 @@ import MusicBody from "./Components/MusicBody";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-black h-screen">
       {/* <ShowMusic /> */}
-    
-        <MusicBody />
-      
+
+      <MusicBody />
     </div>
   );
 }

@@ -71,7 +71,7 @@ const MusicBody: FC = () => {
         </div>
 
         {/* Middle Video (Visible on desktop only) */}
-        <div className="hidden md:flex flex-col items-center justify-center flex-1 w-full">
+        <div className="hidden md:flex flex-col items-center justify-center flex-1 w-full space-y-6">
           <video
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-96 object-contain rounded md:rounded-none"
             src="/assets/gif-black.mp4"
@@ -81,75 +81,100 @@ const MusicBody: FC = () => {
             playsInline
             onContextMenu={(e) => e.preventDefault()}
           />
-          {/* Play Button */}
-          {/* <IconContext.Provider value={{ color: "white", size: "30px" }}>
-            {!isPlaying && (
-              <button onClick={handlePlayAudio} className=" mt-10 md:mt-0">
-                <IoPlayCircleOutline />
-              </button>
-            )}
-          </IconContext.Provider> */}
-        </div>
 
-        {/* Bottom Section */}
-        <div className="flex flex-col items-center md:justify-end">
-          {/* Social Icons */}
-          <div className="flex flex-wrap justify-center md:justify-start space-x-4">
+          {/* Icons moved here */}
+          <div className="flex flex-wrap justify-center space-x-4">
             <IconContext.Provider value={{ color: "white", size: "22px" }}>
               <a
                 href="https://www.youtube.com/@CrankTasy"
-                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="YouTube"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
                 <IconBrandYoutube />
               </a>
-            </IconContext.Provider>
-            <IconContext.Provider value={{ color: "white", size: "22px" }}>
               <a
                 href="http://instagram.com/cranktasy"
-                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Instagram"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
-                <span>
-                  <IconBrandInstagram />
-                </span>
+                <IconBrandInstagram />
               </a>
-            </IconContext.Provider>
-            <IconContext.Provider value={{ color: "white", size: "22px" }}>
               <a
                 href="http://threads.net/@cranktasy"
+                aria-label="Threads"
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
-                aria-label="Thread"
               >
-                  <IconBrandThreads />
+                <IconBrandThreads />
               </a>
-            </IconContext.Provider>
-
-            <IconContext.Provider value={{ color: "white", size: "22px" }}>
               <a
                 href="https://www.facebook.com/cranktasy.pro"
-                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Facebook"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
                 <IconBrandFacebook />
               </a>
-            </IconContext.Provider>
-
-            <IconContext.Provider value={{ color: "white", size: "22px" }}>
               <a
                 href="http://x.com/cranktasy"
-                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Twitter"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
                 <IconBrandTwitter />
               </a>
-            </IconContext.Provider>
-            <IconContext.Provider value={{ color: "white", size: "22px" }}>
               <div
                 onClick={handleGmailClick}
                 id="gmail-icon"
-                className="text-white cursor-pointer hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 aria-label="Gmail"
+                className="text-white cursor-pointer hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+              >
+                <IconMail />
+              </div>
+            </IconContext.Provider>
+          </div>
+        </div>
+        {/* Mobile only icons */}
+        <div className="flex md:hidden mt-6">
+          <div className="flex flex-wrap justify-center space-x-4">
+            <IconContext.Provider value={{ color: "white", size: "22px" }}>
+              <a
+                href="https://www.youtube.com/@CrankTasy"
+                aria-label="YouTube"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+              >
+                <IconBrandYoutube />
+              </a>
+              <a
+                href="http://instagram.com/cranktasy"
+                aria-label="Instagram"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+              >
+                <IconBrandInstagram />
+              </a>
+              <a
+                href="http://threads.net/@cranktasy"
+                aria-label="Threads"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+              >
+                <IconBrandThreads />
+              </a>
+              <a
+                href="https://www.facebook.com/cranktasy.pro"
+                aria-label="Facebook"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+              >
+                <IconBrandFacebook />
+              </a>
+              <a
+                href="http://x.com/cranktasy"
+                aria-label="Twitter"
+                className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+              >
+                <IconBrandTwitter />
+              </a>
+              <div
+                onClick={handleGmailClick}
+                id="gmail-icon"
+                aria-label="Gmail"
+                className="text-white cursor-pointer hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
                 <IconMail />
               </div>
