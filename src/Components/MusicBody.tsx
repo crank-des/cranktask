@@ -1,8 +1,4 @@
 import { FC } from "react";
-import { FaInstagram } from "react-icons/fa";
-import { BiLogoGmail } from "react-icons/bi";
-import { FaFacebook, FaYoutube } from "react-icons/fa";
-import { FaSquareThreads, FaSquareXTwitter } from "react-icons/fa6";
 import {
   IconBrandInstagram,
   IconBrandYoutube,
@@ -40,10 +36,10 @@ const MusicBody: FC = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full overflow-hidden min-h-screen h-[100dvh]">
       {/* Background Video for Mobile */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0 block md:hidden"
+        className="absolute inset-0 w-full h-full object-cover z-0 block md:hidden brightness-125 contrast-110 saturate-110"
         src="/assets/gif-black.mp4"
         autoPlay
         loop
@@ -53,15 +49,15 @@ const MusicBody: FC = () => {
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70 z-10 block md:hidden" />
+      {/* <div className="absolute inset-0 bg-black/40 z-10 block md:hidden" /> */}
 
       {/* Foreground Content */}
       <div className="relative z-20 flex flex-col items-center justify-between h-full px-4 py-6">
-        <audio loop className="hidden">
+        {/* <audio loop className="hidden">
           <source src="/assets/backBeat.wav" type="audio/wav" />
           <source src="/assets/backBeat2.mp3" type="audio/mp3" />
           Your browser does not support the audio element.
-        </audio>
+        </audio> */}
 
         {/* Head */}
         <div className="flex flex-col items-center mt-6 md:mt-4">
@@ -107,7 +103,7 @@ const MusicBody: FC = () => {
                 <IconBrandThreads />
               </a>
               <a
-                href="https://www.facebook.com/cranktasy.pro"
+                href="https://facebook.com/cranktasy"
                 aria-label="Facebook"
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
@@ -157,7 +153,7 @@ const MusicBody: FC = () => {
                 <IconBrandThreads />
               </a>
               <a
-                href="https://www.facebook.com/cranktasy.pro"
+                href="https://facebook.com/cranktasy"
                 aria-label="Facebook"
                 className="text-white hover:text-cyan-400 transition-all duration-300 hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
